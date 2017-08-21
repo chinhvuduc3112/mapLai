@@ -9,6 +9,8 @@ import android.location.Location;
 import android.opengl.Matrix;
 import android.view.View;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,9 +36,17 @@ public class AROverlayView extends View {
 
         //Demo points
         arPoints = new ArrayList<ARPoint>() {{
-            add(new ARPoint("Sun Wheel", 16.0404856, 108.2262447, 0));
             add(new ARPoint("Linh Ung Pagoda", 16.1072989, 108.2343984, 0));
         }};
+    }
+
+    public void setSearchLocation(String locationName, LatLng latLng){
+        arPoints.clear();
+        arPoints.add(new ARPoint(locationName, latLng.latitude, latLng.longitude, 0));
+    }
+
+    public List<ARPoint> getArPoints() {
+        return arPoints;
     }
 
     public void updateRotatedProjectionMatrix(float[] rotatedProjectionMatrix) {

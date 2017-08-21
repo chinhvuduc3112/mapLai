@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AR Location-based</string>
+    <string name="google_geo_api">AIzaSyDnd8zHaVSIgBsQATNJ3SLtflksq2WAG8U</string>
+    <string name="google_direction_api">AIzaSyB7Tvx3NNepv2CONjNtWdrFls8W5m3k5Vg</string>
+
+    <string name="error_direction_map">Không thể lấy dữ liệu chỉ đường.</string>
 </resources>
